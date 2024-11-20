@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 import profilePic from "../images/profilePic.png"
 import { Card, CardBody, CardHeader, Col, Row, Container } from "reactstrap";
+import Surprise from "./Surprise";
 
 const About = ({ sharedBasicInfo, resumeBasicInfo }) => {
   const sectionName = resumeBasicInfo?.section_name?.about || "";
   const hello = resumeBasicInfo?.description_header || "";
   const about = resumeBasicInfo?.description || "";
+  const [counter, setCounter] = useState(0);
+
+  // const handleClick1 = () => {
+  //   // Counter state is incremented
+  //   setCounter(counter + 1);
+
+  //   if (counter == 5) {
+  //     setCounter(0)
+  //     return <Surprise />
+  //   }
+  // };
+
+  useEffect(() => {
+    if (counter == 5) {
+      setCounter(0)
+    }
+  }, [counter])
 
   return (
     <section id="about">
@@ -24,7 +42,17 @@ const About = ({ sharedBasicInfo, resumeBasicInfo }) => {
         >
           <div className="polaroid">
             <span style={{ cursor: "auto" }}>
-              <img height="250px" src={profilePic} alt="İlyas Semih Akdemir" />
+              <img
+                height="250px"
+                src={profilePic}
+                alt="İlyas Semih Akdemir"
+                onClick={() => {
+                  console.log("counter : ", counter);
+                  setCounter(counter + 1);
+                  // handleClick1
+                }}
+              />
+              {counter == 4 && <Surprise />}
               <Icon
                 icon="skill-icons:dotnet"
                 style={{ fontSize: "400%", margin: "9% 5% 0 5%" }}
