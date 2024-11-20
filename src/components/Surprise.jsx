@@ -46,18 +46,20 @@ const Surprise = () => {
   }, []);
 
   return (
-    <div className="surprise-container">
-      {/* <img
-        height="250px"
-        src={ciftPicture}
-        className="message"
-        style={{
-          // marginLeft: "28vw",
-          top: "30%",
-          borderRadius: "15px"
-        }}
-      /> */}
-      <h2 className="message">Seni çok seviyorum nişanlım ❤️</h2>
+    <div className="surprise-container" style={{ zIndex: 1000 }}>
+      <div className="message">
+        <img
+          height="30%"
+          src={ciftPicture}
+          style={{
+            // marginLeft: "28vw",
+            top: "30%",
+            borderRadius: "15px",
+            justifySelf: "center"
+          }}
+        />
+        <h2>❤️ Seni çok seviyorum nişanlım ❤️</h2>
+      </div>
     </div>
   );
 };

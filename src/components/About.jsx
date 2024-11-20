@@ -21,7 +21,7 @@ const About = ({ sharedBasicInfo, resumeBasicInfo }) => {
   // };
 
   useEffect(() => {
-    if (counter == 5) {
+    if (counter == 7) {
       setCounter(0)
     }
   }, [counter])
@@ -47,12 +47,11 @@ const About = ({ sharedBasicInfo, resumeBasicInfo }) => {
                 src={profilePic}
                 alt="İlyas Semih Akdemir"
                 onClick={() => {
-                  console.log("counter : ", counter);
                   setCounter(counter + 1);
                   // handleClick1
                 }}
               />
-              {counter == 4 && <Surprise />}
+              {counter == 6 && <Surprise />}
               <Icon
                 icon="skill-icons:dotnet"
                 style={{ fontSize: "400%", margin: "9% 5% 0 5%" }}
