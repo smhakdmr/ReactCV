@@ -30,7 +30,7 @@ const Header = () => {
         }}
         startDelay={100}
         cursorColor="#3F3D56"
-        multiText={["Full Stack Developer", "React Developer", ".Net Developer"]}
+        multiText={["React Developer", ".Net Developer", "Full Stack Developer"]}
         multiTextDelay={1}
         typeSpeed={100}
       />
@@ -65,7 +65,7 @@ const Header = () => {
             <br />
             {/* İsim */}
             <Row>
-              <Col id="headerText"> 
+              <Col id="headerText">
                 <Typewriter
                   textStyle={{
                     fontFamily: "Arial",
@@ -130,6 +130,26 @@ const Header = () => {
                 />
               </Col>
             </Row>
+            <br />
+            <Row>
+              <Col md={4}></Col>
+              <Col>
+                <Icon
+                  className="iconify language-icon mr-5"
+                  icon="twemoji-flag-for-flag-united-kingdom"
+                  data-inline="false"
+                />
+              </Col>
+              
+              <Col>
+                <Icon
+                  className="iconify language-icon"
+                  icon="twemoji-flag-for-flag-turkey"
+                  data-inline="false"
+                />
+              </Col>
+              <Col md={4}></Col>
+              </Row>
           </Col>
         </Row>
       </div>

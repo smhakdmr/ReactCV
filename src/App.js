@@ -1,7 +1,5 @@
 import Header from './components/Header';
 import "./App.scss";
-import { Icon } from '@iconify/react';
-import { Row, Col } from 'reactstrap';
 import About from './components/About';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Projects from './components/Projects';
@@ -241,37 +239,8 @@ const App = () => {
   return (
     <div>
       <Header />
-      {/* <Row>
-        <Col md={12}>
-          <div
-            className="col-md-12"
-            style={{
-              textAlign: 'center',
-              marginLeft: 'auto',
-              marginRight: 'auto'
-            }}
-          >
-            <div
-              style={{ display: "inline" }}
-            >
-              <Icon
-                className="iconify language-icon mr-5"
-                icon="twemoji-flag-for-flag-united-kingdom"
-                data-inline="false"
-              />
-            </div>
-            <div
-              style={{ display: "inline" }}
-            >
-              <Icon
-                className="iconify language-icon"
-                icon="twemoji-flag-for-flag-turkey"
-                data-inline="false"
-              />
-            </div>
-          </div>
-        </Col>
-      </Row> */}
+      {/* <Celebration /> */}
+      {/* <Surprise /> */}
       <About resumeBasicInfo={basicInfo} />
       <Skills sharedSkills={skills} />
       <Experience resumeExperience={experience} />
